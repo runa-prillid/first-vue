@@ -1,1 +1,36 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, Vue!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
 
+<body>
+
+<header>
+    <div class="header-wrap">
+        <h1 id="title">Task</h1>
+    </div>
+</header>
+<div id="app">
+    
+    <ul>
+        <li v-for="todo in todos">
+            <todo-item v-bind:todo="todo" v-on:remove="todos.splice(index, 1)"></todo-item>
+        </li>
+    </ul>
+
+    <div class="addBox">
+        <input type="text" v-model="input">
+        <button type="button" v-on:click="addTodo" class="button add">追加</button>
+    </div>
+
+
+</div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.1/vue.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
