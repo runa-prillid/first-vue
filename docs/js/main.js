@@ -36,8 +36,25 @@ var vm = new Vue ({
             this.todos.push({
                 completed: false,
                 text: this.input
-            })
+            })  
             this.input = '' //追加した後入力欄を空にする
-        }
+            this.saveTodo();
+        },
+        removeTodo: function(){
+            todos.splice(index, 1);
+            this.saveTodo();
+        },
+        saveTodo: function(){
+            localStorage.setItem('todos', JSON.stringify(this.todos));
+        },
+        loadTodo: function(){
+            this.todos = JSON.parse( localStorage.getItem('todos') );
+            if( !this.todos ){
+              this.todos = [];
+            }
+          },
+          mounted: function(){
+            this.loadTodo();
+          }
     }
 });
