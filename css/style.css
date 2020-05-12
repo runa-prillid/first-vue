@@ -1,0 +1,122 @@
+body {
+    color: #999999;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    box-sizing: border-box;
+    width: 100%;
+    height: 64px;
+    padding: 8px;
+    top: 0;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+    z-index: 100;
+}
+
+.header-wrap {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+#title {
+    margin: 0 4px;
+    padding: 0 12px;
+}
+
+#app{
+    box-sizing: border-box;
+    margin-top: 64px;
+    padding: 2em;
+    width: 100%;
+    max-width: 464px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%
+}
+
+li {
+    padding: 1.5em 1em;
+    border-top: 1px solid #dddddd;
+}
+
+li:first-child{
+    border-top: none;
+}
+
+li div {
+    position: relative;
+    padding-right: 4em;
+}
+
+li button {
+    position: absolute;
+    top: 1px;
+    right: 0;
+}
+
+.done {
+    color: #888888;
+    text-decoration: line-through;
+}
+
+.red {
+    display: inline-block;
+    margin-left: 1em;
+    color: #ef476f;
+}
+
+input[type="text"] {
+    box-sizing: border-box;
+    width: calc(100% - 5em);
+    max-width: 280px;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: 1px solid #DDD;
+    border-radius: 3px
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 0 4px 0 rgba(255,153,0,1);
+    border: 2px solid #FFF !important;
+    outline: 0;
+}
+
+input[type="checkbox"] {
+    margin-right: 0.5em;
+}
+
+.button {
+    margin: 4px 0;
+    padding: 7px 15px;
+    color: #fff;
+    background-color: rgb(53, 139, 238);
+    border-radius: 3px;
+    border-style: none;  
+}
+
+.button.add {
+    font-size: 16px;
+}
+
+.button.remove {
+    font-size: 14px;
+    margin: 0;
+    padding: 2px 6px;
+    border-radius: 12px;
+    background-color: #aaa;
+}
+
+.addBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 1em;
+}
